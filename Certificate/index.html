@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Certificate Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+    .response {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <header class="mb-4">
+      <h1 class="text-center">Blockchain Certificate Validator</h1>
+    </header>
+    <nav class="mb-4">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#add-block" data-toggle="tab">Add Block</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#validate-block" data-toggle="tab">Validate Block</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="content">
+      <div class="tab-content">
+        <section id="add-block" class="tab-pane fade show active">
+          <h2 class="mb-4">Add Block</h2>
+          <form id="addBlockForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="position">Position:</label>
+              <input type="text" id="position" name="position" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="guests">Guests:</label>
+              <input type="text" id="guests" name="guests" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="institution">Institution:</label>
+              <input type="text" id="institution" name="institution" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="additionalToken">Additional Token:</label>
+              <input type="text" id="additionalToken" name="additionalToken" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Block</button>
+          </form>
+          <div id="addBlockResponse" class="response"></div>
+        </section>
+        <section id="validate-block" class="tab-pane fade">
+          <h2 class="mb-4">Validate Block</h2>
+          <form id="validateBlockForm">
+            <div class="form-group">
+              <label for="certificateId">Verification Hash:</label>
+              <input type="text" id="certificateId" name="certificateId" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Validate Block</button>
+          </form>
+          <div id="validateBlockResponse" class="response"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript libraries -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
