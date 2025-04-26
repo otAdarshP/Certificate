@@ -90,6 +90,9 @@ class Blockchain:
 
 # FastAPI application
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"message": "API is working!"}
 
 app.add_middleware(
     CORSMiddleware,
